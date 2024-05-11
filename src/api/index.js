@@ -1,0 +1,1 @@
+export const axios = "https://fakestoreapi.com/"
