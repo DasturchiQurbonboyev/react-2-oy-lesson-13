@@ -10,15 +10,15 @@ import axios from '../../api'
 
 const Navbar = () => {
 
-    const [openInput, setOpenInput] = useState(false)
-    console.log(openInput);
+
+
 
     const [value, setValue] = useState("")
     const [data, setData] = useState(null)
     useEffect(() => {
         axios.get(`products/search?q=${value}`)
             .then(res => setData(res.data.products))
-            .catch(err => console.log(err))
+            .catch(err => console.log("errrrrrrrrr>>>>", err))
     }, [value])
 
 
@@ -84,7 +84,7 @@ const Navbar = () => {
                             }
 
                         </form>
-                        : <></>
+
 
 
                         <img src={account} alt="" />

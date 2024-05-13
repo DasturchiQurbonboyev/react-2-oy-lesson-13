@@ -26,9 +26,7 @@
     outline: none;
 }
 
-input {
-    padding: 20px 150px 25px 10px;
-}
+
 
 
 @media(max-width: 950px) {
@@ -42,9 +40,7 @@ input {
         gap: 35px;
     }
 
-    input {
-        padding: 20px 150px 25px 10px;
-    }
+
 
     .grid-row {
         display: grid;

@@ -169,6 +169,7 @@ nav {
     border: none;
     outline: none;
     flex: 1 !important;
+    padding: 0 25px;
     /* background: #000; */
 }
 
@@ -184,13 +185,14 @@ nav {
     height: auto;
     background: white;
     box-shadow: 3px 5px 10px #0002;
-    padding: 12px;
+    padding: 5px;
 
 }
 
 .search__result__box {
     padding: 2px 3px;
     display: flex;
+    gap: 5px;
     align-items: center;
 }
 
@@ -199,6 +201,13 @@ nav {
     object-fit: contain;
 }
 
+.search__result__box span {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
 .search__result__box:hover {
-    background: #666;
+    background: #c9c5c5;
 }
