@@ -1,1 +1,6 @@
-export const axios = "https://fakestoreapi.com/"
+import axios from "axios"
+const mainURL = axios.create({
+    baseURL: "https://dummyjson.com/"
+})
+
+export default mainURL

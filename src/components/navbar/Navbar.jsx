@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Navbar.css"
 import close from "../../assets/img/close.svg"
 import logo from "../../assets/img/logo.svg"
 import cart from "../../assets/img/Shopping Cart.svg"
 import account from "../../assets/img/Person.svg"
-import search from "../../assets/img/Search.svg"
+import NavbarSearchModle from './NavbarSearchModle'
+import axios from '../../api'
+
 
 const Navbar = () => {
+
+    const [openInput, setOpenInput] = useState(false)
+    console.log(openInput);
+
+    const [value, setValue] = useState("")
+    const [data, setData] = useState(null)
+    useEffect(() => {
+        axios.get(`products/search?q=${value}`)
+            .then(res => setData(res.data.products))
+            .catch(err => console.log(err))
+    }, [value])
+
+
+
+
     return (
         <>
             <header>
@@ -52,7 +69,27 @@ const Navbar = () => {
                         <img src={close} alt="Menu" />
                     </button>
                     <div className="search">
-                        <img src={search} alt="" />
+
+                        {
+                            openInput
+                                ?
+                                <form className='navbar__search'>
+                                    {
+
+                                    }
+                                    <input value={value} onChange={e => setValue(e.target.value)} type="text" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="100" viewBox="0 0 50 50">
+                                        <path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path>
+                                    </svg>
+                                    {
+                                        value ? <NavbarSearchModle data={data} /> : <></>
+                                    }
+
+                                </form>
+                                : <></>
+                        }
+
+
                         <img src={account} alt="" />
                         <img src={cart} alt="" />
                     </div>

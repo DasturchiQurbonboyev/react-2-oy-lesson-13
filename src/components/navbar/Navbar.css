@@ -142,3 +142,68 @@ nav {
 .navbar-shrink {
     padding: 20px 0;
 } */
+
+
+
+
+
+
+
+.navbar__search {
+    /* border: 1px solid #000; */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding-right: 10px;
+    position: relative;
+    height: 40px;
+}
+
+.navbar__search svg {
+    cursor: pointer;
+}
+
+.navbar__search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    flex: 1 !important;
+    /* background: #000; */
+}
+
+
+
+
+.navbar__search__result {
+    position: absolute;
+    width: 100%;
+    top: calc(100% + 2px);
+    max-height: 200px;
+    overflow: auto;
+    height: auto;
+    background: white;
+    box-shadow: 3px 5px 10px #0002;
+    padding: 12px;
+
+}
+
+.search__result__box {
+    padding: 2px 3px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search__result__box img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.search__result__box:hover {
+    background: #666;
+}
+
+
+
+/* FORM UCHUN STYLE */

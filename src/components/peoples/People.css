@@ -15,6 +15,7 @@
 
 .slick-next:before,
 .slick-prev:before {
+    box-sizing: border-box;
     position: absolute;
     background: #000 !important;
 }

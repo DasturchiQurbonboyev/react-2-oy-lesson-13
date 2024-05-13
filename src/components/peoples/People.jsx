@@ -1,6 +1,7 @@
 import React from 'react'
 import './People.css'
 import Slider from 'react-slick';
+import hamza from '../../assets/img/carousel/hamza.png'
 
 const People = () => {
     var settings = {
@@ -28,7 +29,7 @@ const People = () => {
                 <div className='crausel'>
                     <div className="item">
                         <div className="carousel-img">
-                            <img src="./images/carousel/hamza.png" alt="" />
+                            <img src={hamza} alt="" />
                         </div>
                         <div className="carousel-about">
                             <h5>Hamza Faizi</h5>
@@ -38,7 +39,7 @@ const People = () => {
                     </div>
                     <div className="item">
                         <div className="carousel-img">
-                            <img src="./images/carousel/hamza.png" alt="" />
+                            <img src={hamza} alt="" />
                         </div>
                         <div className="carousel-about">
                             <h5>Hamza Faizi</h5>
@@ -68,7 +69,7 @@ const People = () => {
                 <h2>What People Say About Us</h2>
             </center>
 
-            <div id="team-carousel" className="owl-carousel owl-theme">
+            {/* <div id="team-carousel" className="owl-carousel owl-theme">
 
                 <div className="item">
                     <div className="carousel-img">
@@ -166,7 +167,7 @@ const People = () => {
                         <img src="./images/products/yulduzchalar.svg" alt="" />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     )
