@@ -34,8 +34,13 @@ input {
     /* padding: 20px 170px 20px 56px; */
 }
 
+.input-1 {
+    height: 60px;
+    display: flex;
+}
+
 .input-1 input {
-    /* padding: 20px 100px 20px 56px; */
+    padding-left: 15px;
 }
 
 input:focus {

@@ -16,7 +16,7 @@ const Navbar = () => {
     const [value, setValue] = useState("")
     const [data, setData] = useState(null)
     useEffect(() => {
-        axios.get(`products/search?q=${value}`)
+        axios.get(`products/search?q=${value.trim()}`)
             .then(res => setData(res.data.products))
             .catch(err => console.log("errrrrrrrrr>>>>", err))
     }, [value])

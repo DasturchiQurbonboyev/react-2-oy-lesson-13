@@ -21,6 +21,15 @@
     grid-row-gap: 15px;
 }
 
+.input {
+    height: 60px;
+    display: flex;
+}
+
+.input input {
+    padding-left: 15px;
+}
+
 .input input {
     border: none;
     outline: none;
