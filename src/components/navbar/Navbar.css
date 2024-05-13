@@ -192,7 +192,6 @@ nav {
     padding: 2px 3px;
     display: flex;
     align-items: center;
-    gap: 15px;
 }
 
 .search__result__box img {
@@ -203,7 +202,3 @@ nav {
 .search__result__box:hover {
     background: #666;
 }
-
-
-
-/* FORM UCHUN STYLE */
